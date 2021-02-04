@@ -1,0 +1,73 @@
+// CSS Grid layout
+body {
+
+  background-color:#1a1b1f;
+  
+}
+
+// wrap
+#wrap {
+
+  min-width:1400px;
+
+  // lecture
+  &.lecture {
+    #header {
+      height:80px;
+      padding-left:26px;
+    }
+    #contents {
+      padding-top:80px;
+    }
+  }
+}
+
+// lecture
+.lecture-wrap {
+  display: flex;
+  min-width:1400px;
+  height:calc(100vh - 80px);
+  > .lecture-lnb {
+    width:209px;
+    height:100%;
+    .lnb-list {
+      padding:20px 0 0 0;
+      li {
+        a {
+          position:relative;
+          display:block;
+          padding:20px 0 20px 64px;
+          color:#fff;
+          font-size:rem(15);
+          font-weight:500;
+          line-height:1.2;
+          &:before {
+            content:'';
+            display:block;
+            position:absolute;
+            top:50%;
+            left:30px;
+            width:19px;
+            height:15px;
+            transform: translateY(-50%);
+            background-repeat: no-repeat;
+            background-position: center center;
+          }
+        }
+        @for $i from 1 to 5 {
+          &:nth-child(#{$i}) {
+            a {
+              &:before {
+                background-image:url("../images/icon/lecture_lnb_icon0#{$i}.png");
+              }
+            }
+          }  
+        }
+      }
+    }
+  }
+  > .lecture-contents {
+    flex:1;
+    min-height:100%;
+  }
+}
