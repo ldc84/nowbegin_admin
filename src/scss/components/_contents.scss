@@ -57,6 +57,22 @@
           font-weight:500;
           background:#000;
         }
+        .mike {
+          display:block;
+          position:absolute;
+          bottom:5px;
+          right:7px;
+          width:24px;
+          height:24px;
+          background-repeat: no-repeat;
+          background-position:center center;
+          &.off {
+            background-image:url("../images/icon/icon_mike_off.png");
+          }
+          &.on {
+            background-image:url("../images/icon/icon_mike_on.png");
+          }
+        }
         .close {
           position:absolute;
           top:0;
