@@ -73,7 +73,7 @@
             background-image:url("../images/icon/icon_mike_on.png");
           }
         }
-        .close {
+        .movie-close {
           position:absolute;
           top:0;
           right:0;
@@ -180,7 +180,7 @@
         .scene {
           iframe,
           video,
-          .close {
+          .movie-close {
             display:none;
           }
           .nick-2 {
